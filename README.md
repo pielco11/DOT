@@ -18,7 +18,7 @@ The infos are stored in a database, which is in a server controlled by us, so th
 ## Latest update
 - Added the entity to the configuration seed;
 - New data is ready to come.
-- Feb 20, about 23:30: service under maintenance
+- Feb 20, about 23:30 CET: service under maintenance
 
 ## Contact
 
