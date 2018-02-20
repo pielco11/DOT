@@ -16,10 +16,8 @@ The infos are stored in a database, which is in a server controlled by us, so th
 [This](https://cetas.paterva.com/TDS/runner/showseed/fpoldiklLZnPm7) is the link that you need to add this set of transforms to your hub. Some transforms are not ready to run, these are `onionPGPKeys`. `onionIpAddress` and `onionRelatedDomains`. If you run one of these three transform, it will return 0 entities so don't worry about possible errros.
 
 ## Latest update
-Changed the input entity for almost every transform. Open Maltego, select `Import Entities` and choose `entity.mtz`.
-Changed UI title for transforms, more clear now.
-
-Tip: if you don't like these changes, just don't update the transform and everything should work as well since "core" stuff didn't change.
+- Added the entity to the configuration seed;
+- New data is ready to come.
 
 ## Contact
 
