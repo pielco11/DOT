@@ -1,7 +1,9 @@
-# TOT - Tor OSINT Transform
+# DOT - Darknet OSINT Transform
 
-This is the repo of TOT Maltego Transform.
-Renamed this from *OSMT* to *TOT* because now this runs on our written tools.
+[dashboard](screenshot_12.png)
+
+This is the repo of DOT Maltego Transform.
+Finally the right name.
 
 ## What does this do?
 
