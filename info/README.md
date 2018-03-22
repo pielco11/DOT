@@ -4,12 +4,13 @@ In this page we'll resume collected data.
 
 ## Numbers
 
-Scanned/scanning/going to scan about 21K+ domains.
+Updated:  Thu Mar 22 2018 11:39:39 GMT+0100 (CET)
 
-Collected like 1.7K+ verified emails.
-
-Collected like 1.5K+ bitcoin addresses, verified.
+Scanned Onion Services: 42956
+Email addresses: 9109
+Bitcoins addresses: 2313
 
 ## Issues
 
-- Some site is blocking connections.
+- Some site is blocking connections;
+- `return XML could not be parsed`. 
