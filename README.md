@@ -1,7 +1,6 @@
 # DOT - Darknet OSINT Transform
 
 ![dashboard](dashboard.png)
-(__The data showed refers to a specific time range, counts are not unique.__)
 
 This is the repo of DOT Maltego Transform.
 Finally the right name.
