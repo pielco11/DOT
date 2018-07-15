@@ -18,7 +18,7 @@ The infos are stored in a database, which is in a server controlled by us, so th
 [This](https://cetas.paterva.com/TDS/runner/showseed/fpoldiklLZnPm7) is the link that you need to add this set of transforms to your hub. Some transforms are not ready to run, these are `onionPGPKeys`. `onionIpAddress` and `onionRelatedDomains`. If you run one of these three transform, it will return 0 entities so don't worry about possible errors.
 
 ## Latest update
-Added a new transform `report issue`, please use **only** to report which entities return "return XML could not be parsed" and specify: type of the entity (email, bitcoin,...) and the value (e.g. spaghetti@pizza.it).
+Added some code to play with, requires `Python3`
 
 ## Contact
 
