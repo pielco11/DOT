@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 import aiohttp
 from aiohttp_socks import SocksConnector, SocksVer
 from elasticsearch import Elasticsearch, helpers
-import validate_bitcoin
+from cashaddress import convert
 import validate_email
 
 class RecycleObject(object):
@@ -124,7 +124,7 @@ def add_B_db(domain, timestamp, status, title, link, bitcoin, partial):
     try:
         cursor = conn.cursor()
         entry = (domain, timestamp, status, title, link, bitcoin, partial,)
-        query = "INSERT INTO bitcoin VALUES (?,?,?,?,?,?,?)"
+        query = "INSERT INTO bitcoins VALUES (?,?,?,?,?,?,?)"
         cursor.execute(query, entry)
         conn.commit()
     except sqlite3.IntegrityError:
@@ -204,12 +204,9 @@ def filterEmails(email):
 def filterBitcoin(bitcoin):
     """Filter bitcoin address
     """
-    try:
-        if validate_bitcoin.validate(bitcoin):
-            return bitcoin
-        return ""
-    except:
-        return ""
+    if convert.is_valid(bitcoin):
+        return bitcoin
+    return ""
 
 async def getContent(domain, soup, link):
     """Get content from webpage
@@ -285,6 +282,7 @@ async def getContent(domain, soup, link):
                     }
                 }
             add_B_db(domain, _now, 200, title, link, _btc, _partial)
+            #print(" [*] btc: {}".format(_btc))
             _jData.append(_d_obj)
     for _hs in _onionServices:
         _id = domain + urllib.parse.urljoin(domain, link) + _hs
@@ -314,7 +312,7 @@ async def getContent(domain, soup, link):
     add_D_db(domain.split("/")[2], _utp)
     print(" Added to db: {} :: {}".format(domain.split("/")[2], _utp))
     #with nostdout():
-    helpers.bulk(es, _jData, chunk_size=2000, request_timeout=200)
+    #helpers.bulk(es, _jData, chunk_size=2000, request_timeout=200)
     _jData = []
     await fetch(urllib.parse.urljoin(domain, link))
 
@@ -381,8 +379,8 @@ conn = init_db("db.sqlite3")
 tasks = []
 lists = []
 loop = asyncio.get_event_loop()
-u = 100
-for i in range(200):
+u = 520
+for i in range(20):
     _dom = domList[i+u].strip('\n')
     lists.append(_dom.split('/')[2])
     task = asyncio.ensure_future(fetch(_dom))
