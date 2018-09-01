@@ -23,3 +23,5 @@ Added some code to play with, requires `Python3`
 ## Contact
 
 For every request don't hesitate to open an issue. If you prefer contacting us in private you can do it via Twitter or keybase.
+
+Checkout [Darknet Osint Graph Explorer](https://github.com/pielco11/DOGE)
