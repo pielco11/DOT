@@ -20,8 +20,11 @@ The infos are stored in a database, which is in a server controlled by us, so th
 ## Latest update
 Added some code to play with, requires `Python3`
 
+## Do you want to graph results?
+Try out [Darknet Osint Graph Explorer (DOGE)](https://github.com/pielco11/DOGE)
+
+![](https://github.com/pielco11/DOGE/blob/master/images/screenshot_31.png)
+
 ## Contact
 
 For every request don't hesitate to open an issue. If you prefer contacting us in private you can do it via Twitter or keybase.
-
-Checkout [Darknet Osint Graph Explorer](https://github.com/pielco11/DOGE)
