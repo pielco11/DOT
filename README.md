@@ -1,6 +1,7 @@
 # DOT - Darknet OSINT Transform
 
 ![dashboard](dashboard.png)
+![network](screenshot.png)
 
 This is the repo of DOT Maltego Transform.
 Finally the right name.
